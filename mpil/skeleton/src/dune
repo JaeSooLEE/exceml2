@@ -1,0 +1,29 @@
+(dirs src)
+
+(library
+ (name tableur)
+ (modules tableur)
+)
+
+(library
+ (name js_utils)
+ (libraries tableur)
+ (modules js_utils)
+ (preprocess (pps js_of_ocaml-ppx))
+)
+
+(library
+ (name parser)
+ (libraries tableur)
+ (modules ast)
+ (preprocess
+   (action
+     (system "camlp4o %{input-file}")))
+)
+
+(executable
+ (name exceml)
+ (libraries tableur parser js_utils)
+ (modules exceml)
+ (modes js)
+)

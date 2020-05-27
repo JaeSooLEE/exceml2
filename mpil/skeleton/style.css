@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 !important;
+  background: #fff;
+  color: #444;
+  font-size: 16px;
+}
+
+.main-content {
+  max-width: 100%;
+}
+
+.title {
+  background: #217346;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  min-height: 50px;
+}
+
+.cell-content {
+  border: 1px solid #e6e6e6;
+  background: #e6e6e6;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 50px auto;
+}
+
+.cell-container.cell-error {
+  font-size: 11px;
+  color: white;
+  background-color: red;
+}
+
+.cell-container {
+  overflow: hidden;
+  border-right: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  background: #fff;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell-content div:nth-child(1) {
+  justify-content: center;
+  color: #999;
+  font: italic 700 18px "Merriweather", serif;
+  border-right: none;
+}
+
+.cell:disabled {
+  background-color: white;
+}
+
+.cells {
+  position: relative;
+  display: grid;
+  grid-gap: 1px;
+  background: #cdcdcd;
+  grid-auto-flow: dense;
+  max-width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #e6e6e6;
+}
+.spacer {
+  background: #e6e6e6;
+  position: relative;
+}
+.spacer:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  height: 80%;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    transparent 30px,
+    #bbb 30px,
+    #bbb 55px,
+    transparent 55px
+  );
+}
+.alphabet {
+  background: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number {
+  background: #e6e6e6;
+  grid-column: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cells input {
+  position: absolute;
+  border: none;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.cells .editing-input {
+  display: block;
+}
+
+.cells button {
+  border: none;
+  padding: 0 6px;
+}

@@ -1,0 +1,110 @@
+# dune build src/exceml.bc.js --profile release
+# OCAMLPARAM: unset
+# Workspace root: /home/jae/workspace/mpil/skeleton
+$ /usr/bin/nproc > /tmp/dune5d88ad.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /home/jae/.opam/4.07.1/bin/ocamlc.opt -config > /tmp/dune3f91b8.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/jae/.opam/4.07.1/lib/toplevel"
+#  ; ocaml_bin = External "/home/jae/.opam/4.07.1/bin"
+#  ; ocaml = Ok External "/home/jae/.opam/4.07.1/bin/ocaml"
+#  ; ocamlc = External "/home/jae/.opam/4.07.1/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/jae/.opam/4.07.1/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/jae/.opam/4.07.1/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/jae/.opam/4.07.1/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "INSIDE_DUNE" : "/home/jae/workspace/mpil/skeleton/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/jae/workspace/mpil/skeleton/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/jae/workspace/mpil/skeleton/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/jae/workspace/mpil/skeleton/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/home/jae/.opam/4.07.1/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.07.1"
+#      ; standard_library_default = "/home/jae/.opam/4.07.1/lib/ocaml"
+#      ; standard_library = "/home/jae/.opam/4.07.1/lib/ocaml"
+#      ; standard_runtime = "/home/jae/.opam/4.07.1/bin/ocamlrun"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-fPIC" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; cc_profile = [ "-pg" ]
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-unknown-linux-gnu"
+#      ; target = "x86_64-unknown-linux-gnu"
+#      ; profiling = true
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = false
+#      ; exec_magic_number = "Caml1999X023"
+#      ; cmi_magic_number = "Caml1999I024"
+#      ; cmo_magic_number = "Caml1999O023"
+#      ; cma_magic_number = "Caml1999A023"
+#      ; cmx_magic_number = "Caml1999Y023"
+#      ; cmxa_magic_number = "Caml1999Z023"
+#      ; ast_impl_magic_number = "Caml1999M023"
+#      ; ast_intf_magic_number = "Caml1999N023"
+#      ; cmxs_magic_number = "Caml1999D023"
+#      ; cmt_magic_number = "Caml1999T024"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/jae/.opam/4.07.1/bin/ocamldep.opt -modules -impl src/exceml.ml) > _build/default/src/.exceml.eobjs/exceml.ml.d
+$ (cd _build/default && /home/jae/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.exceml.eobjs/byte -I /home/jae/.opam/4.07.1/lib/bytes -I /home/jae/.opam/4.07.1/lib/js_of_ocaml -I /home/jae/.opam/4.07.1/lib/uchar -I src/.js_utils.objs/byte -I src/.js_utils.objs/native -I src/.parser.objs/byte -I src/.parser.objs/native -I src/.tableur.objs/byte -I src/.tableur.objs/native -no-alias-deps -o src/.exceml.eobjs/byte/dune__exe__Exceml.cmo -c -impl src/exceml.ml)
+> File "src/exceml.ml", line 216, characters 8-11:
+> Warning 26: unused variable tmp.
+$ (cd _build/default && /home/jae/.opam/4.07.1/bin/ocamlc.opt -w -40 -g -o src/exceml.bc src/tableur.cma src/parser.cma /home/jae/.opam/4.07.1/lib/js_of_ocaml/js_of_ocaml.cma src/js_utils.cma src/.exceml.eobjs/byte/dune__exe__Exceml.cmo)
+$ (cd _build/default/src && /home/jae/.opam/4.07.1/bin/js_of_ocaml -o exceml.bc.js --no-runtime /home/jae/.opam/4.07.1/lib/js_of_ocaml-compiler/runtime.js exceml.bc)

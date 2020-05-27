@@ -1,0 +1,2 @@
+(** @canonical Parser.Ast *)
+module Ast = Parser__Ast
